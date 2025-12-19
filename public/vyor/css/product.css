@@ -1,0 +1,523 @@
+/* 폰트
+로고&서브메뉴 Playfair Display, Didot
+본문 Libre Baskerville
+메인사진 폰트 "Cormorant Garamond", serif
+
+컬러
+Black : #1A1A1A
+배경 Cream White : #F5F3EE 
+메뉴 #EEEAE2 */
+
+
+/* product.css 맨 위에 */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+
+
+
+*{margin: 0; padding: 0; text-decoration: none; list-style: none; box-sizing: border-box;}
+body{width: 100vw; overflow-x: hidden; background-color: #F5F3EE;}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* product_main 공통 */
+.product_main{
+    /* background-color: aqua; */
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+    .product_video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+    }
+    .product_mainTxt{
+        /* background-color: green; */
+        width: 90%;
+        z-index: 1;
+        position: absolute;
+        bottom: 128px;
+        color: white;
+        line-height: 1.2;
+    }
+        .product_mainTxt h1{
+            font-size: 186px;
+            font-weight: 100;
+            font-family: "Cormorant Garamond", serif;
+            letter-spacing: -0.1rem;
+            transform: translateY(60px);
+            opacity: 0;
+            transition: all 0.8s ease;
+        }
+        .product_mainTxt p{
+            font-size: 23px;
+            color: white;
+            padding-left: 2px;
+            font-family: "Pretendard";
+            transform: translateY(60px);
+            opacity: 0;
+            transition: all 1s ease;
+        }
+        
+
+/* product_menus 메뉴공통 */
+    .product_menus{
+        background-color: #EEEAE2;
+        width: 100%;
+        height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+        .product_menus a{
+            /* background-color: antiquewhite; */
+            padding: 0 35px;
+            font-size: 18px;
+            color: #333333;
+            font-family: "Pretendard";
+            cursor: pointer;
+
+        }
+            .product_menus_bold{
+                color: #000000;
+                font-weight: 600;
+            }
+            .product_menusBar{
+                width: 1px;
+                height: 14px;
+                background-color: #999999;
+                display: inline-block;
+                padding-top: 2px;
+            }
+
+/* 메인 2Page */
+.product_page2{
+    padding: 10% 0 6.5% 0;
+    /* background-color: yellowgreen; */
+    width: 90%; 
+    height: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    border-bottom: 0.5px solid #ccc;
+    position: relative;
+}
+    .product_p2Inbox{
+        /* background-color: tomato; */
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+        .product_p2Img1{
+            width: 58%;
+            height: 100%;
+
+        }
+            .product_p2Img1 img{
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+                display: block;
+            }
+        .product_p2Img2{
+            position: absolute;
+            left: 47.1%; top: 170px;
+        }
+        .product_p2txt1{
+            position: absolute;
+            left: 47.5%; top: 53%;
+            font-family: "Cormorant Garamond", serif;
+            letter-spacing: -0.2rem;
+            color: 000000;
+            background: linear-gradient(to right,
+                white 32.5%,       /* 왼쪽 글씨 색 */
+                black 32.5%        /* 오른쪽 글씨 색 */
+            );
+            -webkit-background-clip: text;
+            color: transparent; /* 글씨를 투명하게 */
+            z-index: 10;
+            margin: 50px 0;
+        }
+        .product_p2txt1 > h2{
+            font-size: 63px;
+        }
+        .product_p2txt2{
+            position: absolute;
+            left: 66%; bottom: 0;
+            /* border: 1px solid black; */
+        }
+            .product_p2txt2 h4{
+                font-size: 22px;
+                margin-bottom: 30px;
+                font-weight: 500;
+                color: #111111;
+                
+            }
+            .product_p2txt2 p{
+                font-size: 1.05rem;
+                font-weight: 500;
+                color: #555555;
+                font-weight: 400;
+                line-height: 2;
+                font-family: "Pretendard";
+            }
+
+/* 3 Page 그리드 공통*/
+.product_page3_outBox{
+    width: 100%;
+    /* height: 200%; */
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0 250px 0; 
+    font-family: "Pretendard";
+}
+.product_page3{
+    /* background-color: hotpink; */
+    width: 90%;
+    height: 90%;
+    height: auto;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: start; */
+    align-items: center;
+    position: relative;
+}
+    .product_page3_link {
+        display: block; /* a태그가 전체 영역 차지하도록 */
+        text-decoration: none;
+        color: inherit; /* 글자색 그대로 유지 */
+    }
+    .product_page3_gridBox{
+        /* background-color: coral; */
+        width: 100%;
+        height: 90%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3칸 고정 */
+        grid-auto-rows: auto; /* 줄 높이는 자동 */
+        gap: 40px;
+    }
+        .product_page3_gridBox_product{
+            /* border: 2px solid #333 ; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+            .product_page3_gridBox_product:hover{
+                transition: all 0.3s ease;
+                transform: scale(1.02);
+            }
+        .product_page3_imgbox{
+            background-color: #bbb;
+            width: 100%;
+            /* height: 70%; */
+            position: relative;
+            aspect-ratio: 1 / 1.1; /* 비율 고정 (1:1~1:1.2 사이) */
+        }
+            .product_page3_imgbox img{
+                width: 100%;
+                height: 100%;
+                /* position: absolute;
+                object-fit: cover; 
+                display: block; */
+                object-fit: cover;
+                object-position: center; /* 중앙 기준으로 잘림 */
+                display: block;
+            }
+        .product_page3_textBox{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            gap: 10px;
+            margin-top: 35px;
+        }
+            .product_page3_textBox h3{
+                font-size: 25px;
+                font-weight: 500;
+            }
+            .product_page3_bar{
+                width: 1px;
+                height: 12px;
+                background-color: #999;
+                margin-bottom: 3px;
+            }
+
+            p{
+                color: #666;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                font-size: 17px;
+                font-weight: 400;
+            }
+        .product_page3_pagenum {
+            margin-top: 100px; 
+        }
+        .product_page3_pagenum h4{
+            width: 12px;
+            /* position: absolute;
+            bottom: 6%; */
+            font-size: 20px;
+            border-bottom: 2px solid #333;
+        }
+        
+        
+
+/* 바디라인, 헤어라인, 페이셜라인 2page 공통 */
+    .product_2page_same{
+        /* background-color: gold; */
+        width: 90%;
+        /* height: auto; */
+        min-height: 85vh;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: auto;
+        border-bottom: 0.5px solid #ccc;
+        margin-top: 4%;
+    }
+        .product_2page_samegridBox{
+            /* background-color: cornflowerblue; */
+            width: 100%;
+            height: auto;
+            /* position: absolute; */
+            bottom: 10%;
+            display: grid;
+            grid-template-columns: 50% auto;
+            gap: 0px;
+        }
+            .product_2page_samegrid{
+                width: 100%;
+                height: 100%;
+                /* border: 2px solid black; */
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+                    .product_2page_samegrid:hover{
+                        transition: all 0.3s ease;
+                        transform: scale(1.02);
+                    }
+                .product_2page_samegrid img{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    object-fit: contain;
+                }
+            .product_2page_gridT{
+                width: 100%;
+                display: flex;
+                font-family: "Pretendard";
+            }
+                .product_2page_gridT h3{
+                    width: 100%;
+                    text-align: center;
+                    font-size: 22px;
+                    font-weight: 400;
+                }
+                .product_2page_gridT div{
+                    width: 50%;
+                    height: 35px;
+                    margin: 30px 0;
+                }
+                    .product_2page_gridT div:nth-child(1){
+                        border-right: 1px solid #999;
+                    }
+                .product_2page_gridT p{
+                    /* background-color: violet; */
+                    text-align: center;
+                    color: #666;
+                    font-size: 17px;
+                    font-weight: 400;
+                    line-height: 1.8;
+                    margin: 0 auto;
+                }
+
+
+/* Products_body_lotion, shampoo 상세페이지 */
+.product_detail{
+    /* background-color: aqua; */
+    width: 90%;
+    height: 150%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center ;
+    margin-top: 180px;
+    margin-bottom: 180px;
+}
+
+.product_detail_gridBox{
+    /* background-color: violet; */
+    width: 100%;
+    display: grid;
+    grid-template-columns:50% auto;;
+    gap: 165px;
+}
+
+
+.product_detail_imgbox{
+    /* background-color: turquoise; */
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product_detail_imgbox img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 비율 유지하면서 꽉 채우기 */
+    display: block;
+}
+
+.product_detail_gridT1{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 15px;
+}
+.product_detail_gridT1 p{
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    font-family: "Cormorant Garamond";
+}
+.product_detail_gridT1 div{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product_detail_gridT2{
+    margin-bottom: 18px;
+    color: #666;
+}
+    .product_detail_gridT2 p{
+        font-size: 17px;
+        font-weight: 400;
+        font-family: "Pretendard";
+    }
+    .gridT2_bar{
+        display: inline-block;
+        width: 1px;
+        height: 12px;
+        margin: 0 2px;
+        background-color: #888;
+    }
+
+.product_detail_gridT3{
+    display: flex;
+    align-items: end;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+.product_detail_gridT3 h1{
+    font-size: 37px;
+    font-weight: 500;
+    font-family: "Pretendard";
+}
+.product_detail_gridT3 p{
+    font-size: 17px;
+    font-weight: 500;
+    padding-bottom: 4px;
+    color: #666;
+    font-family: "Pretendard";
+}
+
+.product_detail_gridT4{
+    margin-bottom: 40px;
+}
+.product_detail_gridT4 h1{
+    font-size: 28px;
+    font-weight: 500;
+    font-family: "Pretendard";
+    
+}
+
+.product_detail_gridT5 div{
+    width: 100%;
+    /* height: 85px; */
+    padding: 32px 0;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 500;
+    border-bottom: 1px solid #bbb;
+    font-family: "Pretendard";
+}
+.product_detail_gridT5 div:nth-child(1){
+    border-bottom: 2px solid #111;
+    font-size: 18px;
+}
+.product_detail_gridT5 a{
+    margin-top: 40px;
+    width: 100%;
+    height: 70px;
+    background-color: #333;
+    display: flex;              /* div처럼 flex 정렬 가능 */
+    justify-content: center;    /* 텍스트 가운데 정렬 */
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-family: "Pretendard";
+}
+
+/* 3 Page 그리드 공통*/
+/* 반응형 - 모바일 (약 600px 이하) */
+@media (max-width: 600px) {
+    .product_page3_outBox {
+        padding: 50px 0 150px 0;
+    }
+
+    .product_page3_gridBox {
+        grid-template-columns: repeat(2, 1fr); /* 모바일도 2칸 */
+        gap: 20px; /* 칸 사이 간격 축소 */
+    }
+
+    .product_page3_gridBox_product {
+        width: 100%;
+    }
+
+    .product_page3_imgbox {
+        aspect-ratio: 1 / 1.1; /* 비율 유지 */
+    }
+
+    .product_page3_textBox {
+        margin-top: 15px;
+        gap: 5px;
+    }
+
+    .product_page3_textBox h3 {
+        font-size: 16px;
+        text-align: center;
+        line-height: 1.3;
+    }
+
+    .product_page3_textBox p {
+        font-size: 13px;
+    }
+
+    .product_page3_pagenum {
+        margin-top: 60px;
+    }
+}

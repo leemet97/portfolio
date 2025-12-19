@@ -1,0 +1,1718 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap");
+
+.cormorant-garamond {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 188px;
+    font-weight: 100;
+    letter-spacing: -0.1rem;
+}
+ul {
+    list-style: none;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #f5f3ee;
+    list-style: none;
+}
+
+/* 섹션1 */
+#brand {
+    position: relative;
+    width: 100%;
+    height: 100svh;
+    overflow: hidden;
+}
+
+#brand video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* 섹션1  기능추가함 */
+.brandText {
+    position: absolute;
+    bottom: 5vh;
+    left: 5vw;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateY(40px);
+    opacity: 0;
+    animation: up 0.8s ease-out forwards;
+    transition: none;
+    will-change: left, opacity;
+}
+
+@keyframes up {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.brandText h1 {
+    color: #fff;
+    font-size: 130px;
+    font-weight: bold;
+    font-size: 188px;
+    font-weight: 300;
+    font-family: "Cormorant Garamond", serif;
+}
+
+.brandText p {
+    color: #fff;
+    font-size: 20px;
+    /* margin-top: 55px; */
+    margin-bottom: 100px;
+}
+
+/* 섹션2 */
+
+#brand_2 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* overflow: hidden; */
+    /* background-color: antiquewhite; */
+    display: flex;
+    flex-wrap: wrap;
+    /* align-content: flex-start;  */
+    gap: 0;
+    justify-content: center;
+}
+
+.brandLeftbox_1 {
+    width: 40%;
+    height: 400px;
+    /* background-color: pink; */
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-family: "Cormorant Garamond", serif;
+    padding-top: 50px;
+}
+
+.brandRightbox_1 {
+    width: 50%;
+    height: 400px;
+    /* background-color: skyblue; */
+    padding-top: 50px;
+}
+
+.brandLeftbox_1 h1 {
+    font-size: 80px;
+    font-weight: lighter;
+}
+
+.brandRightbox_1 p {
+    color: #666;
+    padding-top: 220px;
+    font-size: 18px;
+}
+
+.brandLeftbox_2 {
+    width: 40%;
+    height: 800px;
+    /* background-color: lightgrey; */
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    padding-top: 175px;
+}
+.brandLeftbox_2 h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: lighter;
+}
+
+.brandRightbox_2 {
+    width: 50%;
+    height: 800px;
+    /* background-color: lightcoral; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 175px;
+}
+
+.brandRightbox_2 div {
+    display: flex;
+    gap: 60px;
+}
+
+.brandRightbox_2 img {
+    width: 23.5vw;
+    object-fit: cover;
+    display: block;
+}
+
+/* 섹션3 */
+#brand_3 {
+    width: 100%;
+    height: 100%;
+    margin-top: 15%;
+    display: flex;
+}
+
+.brandLeftbox_3 {
+    width: 50%;
+    margin-top: 12vw;
+    /* background-color: aqua; */
+}
+
+.brandLeftbox_3 img {
+    width: 47vw;
+}
+
+.brandRightbox_3 {
+    width: 45%;
+    height: 44vw;
+    /* background-color: #838181; */
+    margin-top: 15vw;
+    display: flex;
+    align-items: center;
+    justify-items: self-end;
+}
+
+.front {
+    display: flex;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px;
+    /* background-color: red; */
+}
+
+.brandRightbox_3 li {
+    width: 40.5vw;
+    height: 230px;
+    /* background-color: antiquewhite; */
+    border-top: 1px solid #ccc;
+}
+
+.front > .tit1 {
+    width: 100%;
+    height: 120px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #ccc;
+    margin-top: 40px;
+    /* background-color: palegreen; */
+}
+
+.front > .tit2 {
+    width: 100%;
+    height: 120px;
+    font-size: 55px;
+    font-weight: 600;
+    margin-top: 40px;
+    /* background-color: pink; */
+    text-align: right;
+}
+
+.hidden > .tit3 {
+    font-size: 20px;
+}
+
+.hidden .txt {
+    color: #666;
+}
+
+/*섹션3 왼쪽 이미지 페이드아웃 */
+#brand_3 .brandLeftbox_3 {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#brand_3 .brand3-image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* background: #000; */
+}
+
+#brand_3 .brand3-slides img {
+    position: absolute;
+    width: 47vw;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    animation: brand3-fade 20s infinite ease-in-out;
+}
+
+#brand_3 .brand3-slides img:nth-child(1) {
+    animation-delay: 0s;
+}
+#brand_3 .brand3-slides img:nth-child(2) {
+    animation-delay: 5s;
+}
+#brand_3 .brand3-slides img:nth-child(3) {
+    animation-delay: 10s;
+}
+#brand_3 .brand3-slides img:nth-child(4) {
+    animation-delay: 15s;
+}
+
+@keyframes brand3-fade {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* 섹션3 오른쪽 기능 */
+#brand_3 .brandRightbox_3 .front {
+    cursor: pointer;
+}
+
+#brand_3 .brandRightbox_3 .hidden {
+    display: block;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-6px);
+    transition: max-height 0.45s ease, opacity 0.3s ease, transform 0.45s ease;
+    will-change: max-height, opacity, transform;
+}
+
+/* 열림 부드럽게 */
+#brand_3 .brandRightbox_3 li.brand3-on .hidden {
+    max-height: 240px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 열림창 선표시 */
+#brand_3 .brandRightbox_3 li.brand3-on {
+    border-color: #000;
+}
+
+#brand_3 .brandRightbox_3 .tit1 span {
+    color: #333;
+    transition: transform 3s ease;
+}
+
+#brand_3 .brandRightbox_3 li.brand3-on .tit1 span {
+    animation: blink-scale 1.2s ease-in-out 10000;
+}
+
+@keyframes blink-scale {
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0;
+        transform: scale(1.3);
+    }
+}
+
+/* 섹션4 */
+#brand_4 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* overflow: hidden; */
+    /* background-color: antiquewhite; */
+    display: flex;
+    flex-wrap: wrap;
+    /* align-content: flex-start;  */
+    gap: 0;
+    justify-content: center;
+
+    margin-top: 10vw;
+}
+
+.brandLeftbox_4 {
+    width: 40%;
+    height: 100%;
+    /* background-color: lightgrey; */
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    gap: 30px;
+}
+.brandLeftbox_4 h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: lighter;
+}
+
+.brandRightbox_4 {
+    width: 50%;
+    height: auto;
+    /* background-color: lightcoral; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.brandRightbox_4 > div {
+    position: relative;
+    height: auto;
+    display: flex;
+}
+
+.brandRightbox_4 > div img {
+    width: 47vw;
+    align-items: center;
+    object-fit: cover;
+    display: block;
+}
+
+.brandRightbox_4 > div {
+    position: relative;
+}
+
+.brand4_Text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: lighter;
+    /* background-color: aqua; */
+    /* width: auto; */
+    font-size: 36px;
+    /* border: 1px solid red; */
+}
+
+.B4_pBox {
+    width: 100%;
+    height: 100%;
+    /* background-color: antiquewhite; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.B4_pBox > p {
+    color: #fff;
+    font-size: 40px;
+}
+
+/* 섹션5 */
+
+#brand_5 {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.BR5_inbox {
+    /* background-color: pink; */
+    width: 90%;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid #ccc;
+    font-size: 22px;
+}
+
+.BR5_inbox2 {
+    /* background-color: olive; */
+    width: 90%;
+    height: 200px;
+    display: flex;
+    /* flex-direction: column; */
+    border-bottom: 1px solid #ccc;
+
+    justify-content: space-between;
+    align-items: center;
+    gap: 200px;
+}
+
+.BR5_Ininbox1 {
+    width: 200px;
+    height: 150px;
+    /* background-color: antiquewhite; */
+    font-size: 18px;
+}
+
+.BR5_Ininbox2 {
+    width: 200px;
+    height: 150px;
+    /* background-color: antiquewhite; */
+    font-size: 18px;
+    color: #666;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+/* 빈박스 */
+.BR5_Ininbox00 {
+    width: 880px;
+    height: 210px;
+    /* background-color: antiquewhite; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+/* 레몬,장미,나뭇가지 브랜드 하단 이미지 통합*/
+.BR5_inbox3 {
+    /* background-color: orange; */
+    width: 90%;
+    height: 280px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.BR5_imgBox {
+    position: relative;
+    width: 200px;
+    height: auto;
+    /* background-color: antiquewhite; */
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.BR5_imgBox img {
+    width: 100%;
+    display: block;
+}
+
+.BR5_imgtxt,
+.BR5_imgtxt2,
+.BR5_imgtxt3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+}
+
+.BR5_Ininbox3 {
+    width: 200px;
+    height: 210px;
+    /* background-color: antiquewhite; */
+    font-size: 18px;
+    color: #666;
+    /* display: flex;
+    align-items: center;
+    justify-content: flex-start; */
+}
+
+.BR5_Ininbox4 {
+    width: 880px;
+    height: 210px;
+    /* background-color: antiquewhite; */
+    font-size: 17px;
+    color: #666;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.BR5_imgBox {
+    width: 200px;
+    height: auto;
+    /* background-color: antiquewhite; */
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+/* 섹션6 */
+#brand_6 {
+    width: 100%;
+    height: 100vh;
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 이미지 스크롤 기능  */
+.BR6_imgBox {
+    background-image: url("../img/brand/m11_btmVisual_bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    width: 90%;
+    height: 700px;
+}
+
+.BR6_scr_log {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 23%;
+    height: auto;
+    /* background-color: antiquewhite; */
+}
+
+/* -----BI시작 섹션1은 brand와동일 ----- */
+/* 섹션2 */
+#BI_2 {
+    position: relative;
+    width: 100%;
+    height: 100svh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Xbox {
+    width: 30%;
+    height: 100px;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 30px;
+    padding-left: 150px;
+    font-size: 23px;
+}
+
+.BI2_Leftbox {
+    width: 50%;
+    height: auto;
+
+    /* background-color: antiquewhite; */
+}
+
+.BI2_Leftbox > img {
+    width: 100%;
+}
+
+.BI2_Rightbox {
+    width: 45%;
+    height: auto;
+    /* background-color: pink; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.BI2_Right_inBox1 {
+    width: 90%;
+    height: 300px;
+    /* background-color: aqua; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+/* 섹션 2,3 Logo Typeface */
+.BI_fontBox00 > h1 {
+    font-size: 55px;
+    font-weight: 600;
+}
+
+/* BI_fontBox00 줄간격*/
+
+.BI_fontBox00 h1 {
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+}
+
+.BI_fontBox00 h3 {
+    line-height: 4;
+    /* margin: 10px; */
+}
+
+.BI_fontBox00 > div {
+    line-height: 1.9;
+}
+
+.BrBox {
+    width: 88%;
+    height: 50px;
+    /* background-color: blue; */
+    border-top: 1px solid #ccc;
+}
+
+.BI2_Right_inBox2 {
+    width: 88%;
+    height: 200px;
+    /* background-color: red; */
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.BI_RfontBox {
+    width: 100%;
+    height: auto;
+    /* background-color: aqua; */
+    /* padding: 30px; */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-left: 30px;
+}
+
+.BI_RfontBox > p {
+    align-self: flex-start;
+    margin: 0;
+    font-size: 13px;
+    /* background-color: antiquewhite; */
+    color: #666;
+}
+
+.BI_RfontBox > div {
+    font-size: 100px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 650;
+    /* color: #000; */
+    /* background-color: antiquewhite; */
+}
+
+.BI2_Right_inBox3 {
+    width: 88%;
+    height: 200px;
+    /* background-color: tan; */
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+/* BI 섹션3 */
+#BI_3 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 160px;
+}
+
+.BI3_Leftbox {
+    width: 40%;
+    height: 100vh;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-left: 100px;
+    justify-content: center;
+}
+
+#BI_3 .BrBox {
+    width: 700px;
+}
+
+.BI3_Left_inBox {
+    width: 700px;
+    height: 350px;
+    /* background-color: red; */
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.BI_RfontBox {
+    width: 100%;
+    height: auto;
+    /* background-color: aqua; */
+    /* padding: 30px; */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-left: 30px;
+}
+
+.BI_RfontBox > p {
+    align-self: flex-start;
+    margin: 0;
+    font-size: 13px;
+    /* background-color: antiquewhite; */
+    color: #666;
+}
+
+.BI_RfontBox > div {
+    font-size: 100px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 650;
+    /* color: #000; */
+    /* background-color: antiquewhite; */
+}
+
+.BI2_Right_inBox3 {
+    width: 88%;
+    height: 200px;
+    /* background-color: tan; */
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+/* BI 섹션3 */
+#BI_3 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 160px;
+}
+
+.BI3_Leftbox {
+    width: 40%;
+    height: 100vh;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-left: 100px;
+    justify-content: center;
+}
+
+#BI_3 .BrBox {
+    width: 700px;
+}
+
+.BI3_Left_inBox {
+    width: 700px;
+    height: 350px;
+    /* background-color: red; */
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+
+    flex-direction: column;
+}
+
+.BI_LfontBox {
+    width: 100%;
+    height: auto;
+    /* background-color: aqua; */
+    /* padding: 30px; */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-left: 30px;
+}
+
+.BI_LfontBox > p {
+    align-self: flex-start;
+    margin: 0;
+    font-size: 13px;
+    /* background-color: antiquewhite; */
+    color: #666;
+}
+
+.BI_LfontBox > div {
+    font-size: 110px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    /* color: #000; */
+    /* background-color: antiquewhite; */
+}
+
+.BI3_Rightbox > img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.BI3_Rightbox {
+    width: 50%;
+    height: 100vh;
+    /* background-color: pink; */
+    position: relative;
+    display: flex;
+    /* justify-content: space-between; */
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* BI 섹션4 */
+
+#BI_4 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 180px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.BI4Box {
+    width: 90%;
+    height: 200px;
+    /* background-color: antiquewhite; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 120px;
+}
+
+.BI4Box > h2 {
+    font-size: 50px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+}
+
+.BI4Box2_out {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.BI4Box2,
+.BI4Box3 {
+    width: 45%;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    /* background-color: antiquewhite; */
+    gap: 40px;
+}
+
+.B4_inBox {
+    width: 200px;
+    height: 200px;
+    background-color: #1a1a1a;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* justify-content: center; */
+}
+
+.B4_inBox:first-child {
+    align-items: center;
+    justify-content: center;
+}
+
+.B4_inBox2 {
+    width: 200px;
+    height: 200px;
+    background-color: #f5f3ee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.B4_inBox > .B4_txt {
+    color: #fff;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+}
+
+.B4_inBox > p {
+    color: #666;
+    padding-top: 30px;
+}
+
+.BI4Box3 .B4_txt {
+    color: #333;
+}
+
+.B4_inBox > .B4_txt {
+    padding-top: 0;
+}
+
+.B4_inBox--light {
+    background-color: #f5f3ee;
+}
+
+.BI4Box3 .B4_inBox:first-child {
+    align-items: center;
+    justify-content: center;
+}
+
+/* BI 섹션5 */
+
+#BI_5 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.B5_outBox {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.B5_imgBox {
+    width: 90%;
+    height: 43%;
+    position: relative;
+    background-color: gold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.B5_imgBox > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.B5_textBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.B5_textBox h2 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    font-family: "Cormorant Garamond", serif;
+}
+
+/* 브랜드일반 모바일버전  */
+
+@media (max-width: 768px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+    @keyframes fadeUp {
+        0% {
+            opacity: 0;
+            transform: translate(-50%, 30%);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(-50%, 0);
+        }
+    }
+
+    #brand {
+        height: 100svh !important;
+        min-height: 100svh !important;
+        position: relative;
+    }
+
+    .brandText {
+        position: absolute;
+        left: 80%;
+        top: 70%;
+        transform: translate(-50%, 30%);
+        opacity: 0;
+
+        animation: fadeUp 1.2s ease-out forwards;
+
+        /* text-align: center; */
+    }
+
+    .brandText h1 {
+        font-size: 65px;
+    }
+
+    .brandText p {
+        font-size: 16px;
+        margin-top: 0;
+    }
+
+    #brand_2 .brandRightbox_2 {
+        align-items: stretch !important;
+        text-align: left !important;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    #brand_2 .brandRightbox_2 > div {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    #brand_2 .brandRightbox_2 img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-top: 30px;
+    }
+
+    #brand_2 {
+        height: auto !important; /* ← 100vh 덮어쓰기 */
+        display: block !important; /* flex 해제하면 더 안전 */
+        margin: 0 0 24px 0; /* 섹션 간 여백 */
+        overflow: visible; /* 내용 보이게 */
+        position: static !important;
+    }
+
+    .brandLeftbox_1,
+    .brandRightbox_1 {
+        width: 100%;
+        height: 200px;
+        text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .brandLeftbox_1 h1 {
+        font-size: clamp(40px, 12vw, 70px);
+        margin: 0;
+        /* background-color: red; */
+    }
+
+    .brandRightbox_1 p {
+        font-size: 15px;
+        padding: 0 20px;
+        color: #666;
+    }
+
+    .brandLeftbox_2 {
+        width: 100%;
+        text-align: center !important;
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        margin-top: -100px;
+    }
+
+    .brandLeftbox_2 .brMp {
+        color: #666;
+        font-size: 15px !important;
+    }
+
+    .brandRightbox_2 {
+        width: 100%;
+        text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        padding: 0;
+    }
+
+    .brandRightbox_2 > div {
+        display: flex;
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .brandRightbox_2 img {
+        width: 90%;
+        height: auto;
+        display: block;
+    }
+
+    #brand_3 {
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+        position: static !important;
+    }
+
+    .brandLeftbox_3 {
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .brand3-image-container {
+        width: 100vw !important;
+        aspect-ratio: 4/5;
+        height: auto !important;
+        overflow: hidden;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 0;
+    }
+
+    .brand3-slides {
+        position: relative !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .brand3-slides img {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        opacity: 0;
+        animation: brand3-fade 20s infinite ease-in-out !important;
+
+        pointer-events: none;
+    }
+
+    .brand3-slides img:nth-child(1) {
+        animation-delay: 0s !important;
+    }
+    .brand3-slides img:nth-child(2) {
+        animation-delay: 5s !important;
+    }
+    .brand3-slides img:nth-child(3) {
+        animation-delay: 10s !important;
+    }
+    .brand3-slides img:nth-child(4) {
+        animation-delay: 15s !important;
+    }
+
+    .brandRightbox_3 {
+        width: 100% !important;
+        height: auto !important;
+        margin-top: 16px !important;
+        padding: 0 16px !important;
+    }
+
+    .brandRightbox_3 li {
+        width: 100% !important;
+        height: auto !important;
+        padding: 10px 0 12px;
+        border-bottom: 1px solid #e7e7e7;
+    }
+
+    .brandRightbox_3 {
+        padding: 0 !important;
+    }
+
+    .brandRightbox_3 ul {
+        width: min(560px, 92vw);
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .brandRightbox_3 li {
+        padding: 12px 4px;
+    }
+
+    .brandRightbox_3 .front .tit1 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #c9c9c9;
+        line-height: 1.2;
+    }
+    .brandRightbox_3 .front .tit2 {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.2;
+        text-align: right;
+    }
+
+    /* 펼쳐지는 영역 */
+    .brandRightbox_3 .hidden {
+        margin-top: -30px;
+    }
+    .brandRightbox_3 .hidden .tit3 {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+    .brandRightbox_3 .hidden .txt {
+        font-size: 13px;
+        line-height: 1.6;
+        color: #666;
+    }
+
+    #brand_4 {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 30px;
+        width: 100% !important;
+        height: auto !important;
+        margin: 60px 0 !important;
+    }
+
+    .brandLeftbox_4 {
+        width: 100% !important;
+        padding: 0 20px !important;
+        text-align: center !important;
+        margin: 0 !important;
+        order: 2;
+    }
+
+    .brandLeftbox_4 .b4p {
+        font-size: 13px !important;
+    }
+
+    .brandRightbox_4 {
+        width: 100% !important;
+        height: auto !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative !important;
+        order: 1;
+    }
+
+    .brand4_Text {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        z-index: 10 !important;
+        text-align: center !important;
+        color: #ffffff !important;
+        font-size: clamp(28px, 8vw, 40px);
+        width: 100%;
+    }
+
+    .brand4_Text h2 {
+        font-weight: lighter !important;
+        margin-bottom: 12px !important;
+    }
+
+    .brand4_Text .B4_pBox p {
+        font-size: 18px !important;
+        margin: 0;
+    }
+
+    .brandRightbox_4 img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover !important;
+        filter: brightness(80%);
+    }
+
+    #brand_5 {
+        min-height: auto !important;
+        padding: 20px 0;
+    }
+
+    .BR5_inbox {
+        width: 92% !important;
+        height: auto !important;
+        padding: 12px 0;
+        font-size: 18px;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .BR5_inbox2 {
+        width: 92% !important;
+        height: auto !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 10px !important;
+        padding: 12px 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .BR5_Ininbox1 {
+        height: auto !important;
+        font-size: 16px;
+    }
+    .BR5_Ininbox2 {
+        height: auto !important;
+        font-size: 16px;
+        color: #666;
+    }
+    .BR5_Ininbox00 {
+        width: 100% !important;
+        height: 0 !important;
+    }
+
+    .BR5_inbox3 {
+        width: 92% !important;
+        height: auto !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+        padding: 16px 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .BR5_imgBox {
+        width: 100% !important;
+        height: auto !important;
+        position: relative !important;
+    }
+    .BR5_imgBox img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover !important;
+        display: block;
+    }
+    .BR5_imgtxt,
+    .BR5_imgtxt2,
+    .BR5_imgtxt3 {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        margin: 0;
+        padding: 6px 10px;
+        font-size: px !important;
+        letter-spacing: 0.08em;
+        color: #fff !important;
+
+        border-radius: 4px;
+        pointer-events: none;
+    }
+
+    .BR5_Ininbox3 {
+        width: 100% !important;
+        height: auto !important;
+        font-size: 14px !important;
+        color: #666;
+    }
+    .BR5_Ininbox4 {
+        width: 100% !important;
+        height: auto !important;
+        font-size: 14px !important;
+        line-height: 1.7;
+        color: #666;
+    }
+
+    .Xbox {
+        width: 100% !important;
+        padding: 12px 16px !important;
+        font-size: 16px !important;
+        line-height: 1.5;
+        box-sizing: border-box;
+    }
+
+    #BI_2 {
+        display: block !important;
+        height: auto !important;
+        padding: 20px 0 !important;
+        overflow: visible !important;
+    }
+
+    .BI2_Leftbox {
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        order: 1;
+    }
+    .BI2_Leftbox > img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover !important;
+        display: block;
+    }
+
+    .BI2_Rightbox {
+        width: 100% !important;
+        height: auto !important;
+        order: 2;
+        padding: 16px 20px !important;
+        box-sizing: border-box;
+        gap: 16px !important;
+    }
+
+    .BI_fontBox00 h1 {
+        font-size: clamp(28px, 8vw, 40px) !important;
+        line-height: 1.2 !important;
+        margin: 0 0 8px 0 !important;
+    }
+    .BI_fontBox00 h3 {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+        margin: 0 0 8px 0 !important;
+        font-weight: 400 !important;
+    }
+    .BI_fontBox00 > div {
+        font-size: 14px !important;
+        line-height: 1.7 !important;
+        color: #666 !important;
+    }
+
+    .BrBox {
+        width: 100% !important;
+        height: 1px !important;
+        border-top: 1px solid #e5e5e5 !important;
+        margin: 12px 0 !important;
+    }
+
+    .BI2_Right_inBox2,
+    .BI2_Right_inBox3 {
+        width: 100% !important;
+        height: auto !important;
+        border-left: none !important;
+        border-bottom: 1px solid #eee !important;
+        padding: 12px 0 !important;
+    }
+
+    .BI_RfontBox {
+        padding-left: 0 !important;
+        gap: 12px !important;
+    }
+    .BI_RfontBox > p {
+        font-size: 12px !important;
+        color: #888 !important;
+        margin: 0;
+    }
+    .BI_RfontBox > div {
+        font-size: clamp(28px, 10vw, 48px) !important;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 600;
+    }
+
+    #BI_3 {
+        display: block !important;
+        height: auto !important;
+        margin: 60px 0 0 !important;
+        overflow: visible !important;
+    }
+
+    .BI3_Rightbox {
+        order: 1;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+    }
+    .BI3_Rightbox > img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover !important;
+        display: block;
+    }
+
+    .BI3_Leftbox {
+        order: 2;
+        width: 100% !important;
+        height: auto !important;
+        padding: 16px 20px !important;
+        box-sizing: border-box;
+        gap: 16px !important;
+    }
+
+    #BI_3 .BI_fontBox00 h1 {
+        font-size: clamp(28px, 8vw, 40px) !important;
+        line-height: 1.2 !important;
+        margin: 0 0 8px 0 !important;
+    }
+    #BI_3 .BI_fontBox00 h3 {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+        margin: 0 0 8px 0 !important;
+        font-weight: 400 !important;
+    }
+    #BI_3 .BI_fontBox00 > div {
+        font-size: 14px !important;
+        line-height: 1.7 !important;
+        color: #666 !important;
+    }
+
+    #BI_3 .BrBox {
+        width: 100% !important;
+        height: 1px !important;
+        border-top: 1px solid #e5e5e5 !important;
+        margin: 12px 0 !important;
+    }
+
+    .BI3_Left_inBox {
+        width: 100% !important;
+        height: auto !important;
+        border-left: none !important;
+        border-bottom: 1px solid #eee !important;
+        padding: 12px 0 !important;
+    }
+    .BI_LfontBox {
+        padding-left: 0 !important;
+        gap: 12px !important;
+    }
+    .BI_LfontBox > p {
+        font-size: 12px !important;
+        color: #888 !important;
+        margin: 0;
+    }
+    .BI_LfontBox > div {
+        font-size: clamp(28px, 10vw, 48px) !important;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 600;
+        line-height: 1.1;
+    }
+
+    #BI_4 {
+        width: 100%;
+        padding: 60px 20px 0;
+        box-sizing: border-box;
+    }
+
+    #BI_4 .BI4Box h2 {
+        font-size: clamp(28px, 8vw, 40px);
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .BI4Box2_out {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .BI4Box2,
+    .BI4Box3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 18px 0;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    .BI4Box2 .B4_inBox:first-child,
+    .BI4Box3 .B4_inBox:first-child {
+        width: 100%;
+        height: 120px;
+        border-radius: 6px;
+    }
+
+    .B4_inBox {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    /* RGB / CMYK */
+    .B4_inBox > div {
+        font-size: 16px !important;
+        font-weight: 600 !important;
+        margin-bottom: 4px;
+    }
+
+    .B4_inBox > p {
+        font-size: 14px !important;
+        line-height: 1.6;
+    }
+
+    .B4_txt {
+        font-size: 16px !important;
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+
+    .BI4Box2 .B4_inBox:nth-child(2),
+    .BI4Box2 .B4_inBox:nth-child(3),
+    .BI4Box3 .B4_inBox:nth-child(2),
+    .BI4Box3 .B4_inBox:nth-child(3) {
+        text-align: left !important;
+        width: 100% !important;
+        padding-left: 6px;
+    }
+
+    .B4_inBox > div,
+    .B4_inBox > p {
+        margin-left: 4px;
+    }
+
+    #BI_5 {
+        height: auto !important;
+        padding: 40px 0 60px;
+    }
+
+    .B5_outBox {
+        height: auto !important;
+    }
+
+    .B5_imgBox {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 4 / 5; /* 모바일 비율 안정 */
+        overflow: hidden;
+        position: relative;
+    }
+
+    .B5_imgBox img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(80%); /* 텍스트 가독성 위해 */
+    }
+
+    .B5_textBox {
+        width: 90%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+    }
+
+    .B5_textBox h2 {
+        font-size: clamp(28px, 7vw, 38px);
+        margin-bottom: 12px;
+        font-weight: 500;
+    }
+
+    .B5_textBox p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}
+
+/* 테블릿 */
